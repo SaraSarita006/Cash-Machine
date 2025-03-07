@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="619.0"
+            xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Sample.LoginController">
+    <children>
+        <GridPane maxHeight="400.0" maxWidth="600.0" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0">
+            <columnConstraints> <!-- define the grid with 2 columns-->
+                <ColumnConstraints maxWidth="225.0" minWidth="175.0" prefWidth="188.0" />
+                <ColumnConstraints maxWidth="425.0" minWidth="375.0" prefWidth="412.0" />
+            </columnConstraints>
+            <rowConstraints> <!-- define the grid with 3 rows-->
+                <RowConstraints prefHeight="100.0" />
+                <RowConstraints prefHeight="30.0" />
+                <RowConstraints prefHeight="30.0" />
+                <RowConstraints prefHeight="30.0" />
+            </rowConstraints>
+            <children>
+                <Label text="LOGIN PAGE" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="0">
+                   <font>
+                      <Font name="Bell MT Bold" size="56.0" />
+                   </font>
+                </Label>
+
+                <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.rowSpan="3">
+                    <image>
+                        <Image url="/Images/packageIcon.png" /> <!--write the relative path  of the image here.-->
+                    </image>
+                </ImageView>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                   <children>
+                      <Label maxHeight="30.0" nodeOrientation="RIGHT_TO_LEFT" prefWidth="200.0" text="Casher Code:" />
+                      <TextField fx:id="textfield_CasherCode" />
+                   </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                    <children>
+                        <Label maxHeight="30.0" nodeOrientation="RIGHT_TO_LEFT" prefWidth="200.0" text="Password:" />
+                        <TextField fx:id="textfield_password" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                    <children>
+                        <Button fx:id="btn_OK" alignment="CENTER" defaultButton="true" onAction="#btn_OK_Clicked" text="OK" />
+                        <Button fx:id="btn_Cancle" alignment="CENTER" cancelButton="true" onAction="#btn_Cancle_Clicked" text="Cancle" />
+                    </children>
+               <GridPane.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </GridPane.margin>
+                </HBox>
+            </children>
+        </GridPane>
+    </children>
+</AnchorPane>
